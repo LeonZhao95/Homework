@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_pur"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageButton
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back_light"/>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@string/detail"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/test"
+            />
+        <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_gravity="right|bottom"-->
+
+            <!--android:background="@android:color/transparent"-->
+            <!--android:textColor="@color/test"-->
+            <!--android:textSize="16sp"-->
+            <!--android:text="完成"/>-->
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="40dp">
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:background="@drawable/whitecir_btn"/>
+
+        <!--头像在这里上传-->
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center"
+            android:background="@drawable/addpic"/>
+
+    </FrameLayout>
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--<LinearLayout-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<TextView-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:textColor="@color/test"-->
+                <!--android:textSize="20sp"-->
+                <!--android:text="姓名："/>-->
+        <!--</LinearLayout>-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/people"/>
+            <EditText
+
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/white_bg"
+            android:hint="姓名"
+            android:textColorHint="@color/test_lighter"
+            android:paddingLeft="60dp"
+            android:textColor="@color/test"
+            android:textSize="20sp"/>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/card"/>
+            <EditText
+
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/white_bg"
+                android:hint="学号"
+                android:textColorHint="@color/test_lighter"
+                android:paddingLeft="60dp"
+                android:textColor="@color/test"
+                android:textSize="20sp"/>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/friend"/>
+            <Spinner
+            android:id="@+id/gradSpin"
+            style="@style/spinner_style"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:entries="@array/test"
+            android:background="@drawable/white_bg"> </Spinner>
+            <Spinner
+                android:id="@+id/classSpin"
+                style="@style/spinner_style"
+                android:layout_gravity="right"
+                 android:layout_marginLeft="4dp"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:entries="@array/test2"
+                android:background="@drawable/white_bg"> </Spinner>
+        </FrameLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/whitecir_btn"
+            android:text="提交"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"/>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

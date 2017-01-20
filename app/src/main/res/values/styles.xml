@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+
+    </style>
+    <style name="title_bg" parent="Theme.AppCompat">
+        <item name="android:windowTitleBackgroundStyle">@style/Titleground</item>
+    </style>
+    <style name="Titleground">
+        <item name="android:background">#25d45c</item>
+    </style>
+    <style name="spinner_style">
+        <item name="android:background">@drawable/spin_seleclor</item>
+        <item name="android:paddingLeft">5dip</item>
+    </style>
+</resources>

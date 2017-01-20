@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="test">
+        <item>年级</item>
+    </string-array>
+    <string-array name="test2">
+        <item>班级</item>
+    </string-array>
+</resources>
