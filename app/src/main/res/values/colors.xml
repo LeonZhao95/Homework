@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--<color name="colorPrimary">#7985c3</color>-->
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#5260ad</color>
     <color name="colorAccent">#ffffff</color>
-    <!--<color name="colorAccent">#459253</color>-->
     <color name="test">#ffffff</color>
     <color name="test_lighter">#dbdbdb</color>
     <color name="test_wrong">#ff3629</color>
     <color name="test_wrong2">#f55b78</color>
     <color name="brown">#6e5121</color>
+    <color name="transparent">#00000000</color>
+    <color name="darkGreen">#00796B</color>
+    <color name="lightGreen">#B2DFDB</color>
+    <color name="lightGrey">#bfbfbf</color>
+    <color name="white">#FFFFFF</color>
+    <color name="lightWhite">#d9d9d9</color>
+    <color name="background">#e8e8e8</color>
+    <color name="Black">#000000</color>
+    <color name="middleBlack">#414141</color>
+    <color name="lightBlack">#757575</color>
 </resources>

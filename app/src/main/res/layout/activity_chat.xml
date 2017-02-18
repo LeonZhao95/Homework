@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_message"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d8d0e8"
+    android:orientation="vertical"
+    android:layout_marginTop="25dp">
+
+    <ListView
+        android:id="@+id/msg_list_view"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#0000">
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/input_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Type Something here!"
+            android:maxLines="2"
+            android:background="@drawable/edittext"/>
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送"/>
+    </LinearLayout>
+</LinearLayout>

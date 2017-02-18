@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:layout_marginTop="25dp">
+
+    <leon.homework.UI.MasterLayout
+        android:id="@+id/MasterLayout"
+        android:layout_width="64dp"
+        android:layout_height="63dp"
+        android:clickable="true">
+    </leon.homework.UI.MasterLayout>
+
+</LinearLayout>

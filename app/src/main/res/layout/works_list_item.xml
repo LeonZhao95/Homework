@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    >
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/chinese"
+        android:id="@+id/icon" />
+    <FrameLayout
+        android:id="@+id/frame0"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="fill_parent"
+        android:background="@color/lightGrey"
+        android:layout_marginLeft="16dp"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/icon"
+        android:layout_toEndOf="@+id/icon">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="@color/lightGreen">
+
+            </View>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/lightWhite"></View>
+        </LinearLayout>
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="语文"
+                android:textColor="@color/Black"
+                android:id="@+id/tvSub" />
+            <TextView
+                android:id="@+id/tvComp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textSize="14sp"
+                android:text="0/4"
+                android:textColor="@color/middleBlack"
+                android:layout_below="@+id/tvSub"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:textSize="12sp"
+                android:textColor="@color/lightBlack"
+                android:text="11月9日截止"
+                android:layout_alignBottom="@+id/tvComp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+    <View
+        android:layout_below="@+id/frame0"
+        android:layout_width="match_parent"
+
+        android:layout_height="1dp"
+
+        android:layout_marginTop="8dp"
+        android:background="@color/lightGrey"
+        android:layout_alignLeft="@+id/frame0"
+        android:layout_alignStart="@+id/frame0"></View>
+
+</RelativeLayout>

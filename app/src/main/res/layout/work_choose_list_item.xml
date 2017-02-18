@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="48dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    >
+    <ImageView
+        android:layout_marginTop="4dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/complete"
+        android:id="@+id/icon" />
+    <TextView
+        android:layout_marginTop="4dp"
+        android:id="@+id/worktitleTv"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/write"
+        android:layout_toRightOf="@+id/icon"
+        android:textSize="16dp"
+        android:textColor="@color/Black"
+        android:text="超级简单的100道加减混合运算哈哈我算不死你套题"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/lightBlack"
+        android:textSize="14sp"
+        android:text="已耗时38min"
+        android:layout_below="@+id/worktitleTv"
+        android:layout_alignLeft="@+id/worktitleTv"
+        android:layout_alignStart="@+id/worktitleTv"
+        android:id="@+id/timeTv"
+        android:layout_marginBottom="8dp"/>
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/write"
+        android:background="@null"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <!--<View-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_below="@+id/timeTv"-->
+        <!--android:layout_alignLeft="@+id/timeTv"-->
+        <!--android:background="@color/lightGrey"></View>-->
+
+</RelativeLayout>

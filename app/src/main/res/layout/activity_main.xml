@@ -4,12 +4,14 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="leon.homework.MainActivity">
+    tools:context="leon.homework.Activities.MainActivity">
     <FrameLayout
         android:id="@+id/id_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/bottom_navigation_bar" />
+        android:layout_above="@+id/bottom_navigation_bar" >
+
+    </FrameLayout>
     <com.ashokvarma.bottomnavigation.BottomNavigationBar
         android:layout_gravity="bottom"
         android:id="@+id/bottom_navigation_bar"

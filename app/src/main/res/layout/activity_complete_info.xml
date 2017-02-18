@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_pur"
+    android:background="@color/brown"
     android:orientation="vertical">
     <FrameLayout
         android:layout_marginTop="30dp"
@@ -10,7 +11,7 @@
         android:layout_height="wrap_content"
         >
         <ImageButton
-
+            android:id="@+id/imgbtn_back"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@drawable/back_light"/>
@@ -36,40 +37,30 @@
     </FrameLayout>
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="20dp"
+        android:layout_height="128dp">
         <ImageButton
-            android:layout_width="130dp"
-            android:layout_height="130dp"
+            android:id="@+id/imgbtn_pic"
+            android:layout_height="128dp"
             android:layout_gravity="center"
-            android:background="@drawable/whitecir_btn"/>
+            android:background="@drawable/whitecir_btn"
+            android:layout_width="128dp" />
 
         <!--头像在这里上传-->
         <ImageView
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
             android:layout_gravity="center"
-            android:background="@drawable/addpic"/>
-
+            android:background="@drawable/addpic"
+            android:id="@+id/imgview" />
     </FrameLayout>
     <LinearLayout
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <!--<LinearLayout-->
-            <!--android:layout_marginTop="10dp"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content">-->
-            <!--<TextView-->
-                <!--android:layout_width="80dp"-->
-                <!--android:layout_height="50dp"-->
-                <!--android:textColor="@color/test"-->
-                <!--android:textSize="20sp"-->
-                <!--android:text="姓名："/>-->
-        <!--</LinearLayout>-->
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -81,21 +72,44 @@
                 android:layout_height="40dp"
                 android:background="@drawable/people"/>
             <EditText
-
+            android:id="@+id/name_text"
             android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/white_bg"
+                android:background="@drawable/white_bg"
             android:hint="姓名"
             android:textColorHint="@color/test_lighter"
             android:paddingLeft="60dp"
             android:textColor="@color/test"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+                android:layout_height="50dp" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/people"/>
+            <EditText
+                android:id="@+id/txt_sex"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:background="@drawable/white_bg"
+                android:hint="性别"
+                android:textColorHint="@color/test_lighter"
+                android:paddingLeft="60dp"
+                android:textColor="@color/test"
+                android:textSize="20sp"
+                android:layout_height="50dp" />
         </FrameLayout>
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="16dp">
             <ImageView
                 android:layout_marginLeft="5dp"
                 android:layout_gravity="center_vertical"
@@ -103,7 +117,7 @@
                 android:layout_height="40dp"
                 android:background="@drawable/card"/>
             <EditText
-
+                android:id="@+id/id_text"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -115,42 +129,63 @@
                 android:textSize="20sp"/>
         </FrameLayout>
         <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/card"/>
+        <EditText
+            android:id="@+id/txt_birth"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/white_bg"
+            android:hint="出生日期"
+            android:textColorHint="@color/test_lighter"
+            android:paddingLeft="60dp"
+            android:textColor="@color/test"
+            android:textSize="20sp"
+            android:maxLength="10"
+            android:editable="false" />
+
+        </FrameLayout>
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="16dp">
             <ImageView
                 android:layout_marginLeft="5dp"
                 android:layout_gravity="center_vertical"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/friend"/>
-            <Spinner
-            android:id="@+id/gradSpin"
-            style="@style/spinner_style"
-            android:layout_width="175dp"
-            android:layout_height="50dp"
-            android:entries="@array/test"
-            android:background="@drawable/white_bg"> </Spinner>
-            <Spinner
-                android:id="@+id/classSpin"
-                style="@style/spinner_style"
-                android:layout_gravity="right"
-                 android:layout_marginLeft="4dp"
-                android:layout_width="140dp"
+                android:background="@drawable/card"/>
+            <EditText
+                android:id="@+id/txt_cls"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:entries="@array/test2"
-                android:background="@drawable/white_bg"> </Spinner>
+                android:background="@drawable/white_bg"
+                android:hint="班级代码"
+                android:textColorHint="@color/test_lighter"
+                android:paddingLeft="60dp"
+                android:textColor="@color/test"
+                android:textSize="20sp"
+                android:inputType="date" />
         </FrameLayout>
-
         <Button
+            android:id="@+id/btn_submit"
             android:layout_width="match_parent"
             android:layout_gravity="bottom"
             android:layout_height="50dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/whitecir_btn"
-            android:text="提交"
+            android:text="@string/submit"
             android:textSize="20sp"
             android:textColor="#FFFFFF"/>
 
