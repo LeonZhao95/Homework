@@ -19,8 +19,6 @@ import leon.homework.R;
 
 public class MainActivity extends FragmentActivity implements BottomNavigationBar.OnTabSelectedListener {
     private List<Fragment> fragments;
-    public final static String CONNECT_STATUS = "connect_status";
-    public final static String MESSAGE_RECEIVED_ACTION = "msg_received_action";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,81 +105,4 @@ public class MainActivity extends FragmentActivity implements BottomNavigationBa
     public void onTabReselected(int position) {
 
     }
-    /*private MessageReceiver mMessageReceiver;
-    public void registerMessageReceiver() {
-        mMessageReceiver = new MessageReceiver();
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(YunBaManager.MESSAGE_RECEIVED_ACTION);
-        filter.addCategory(getPackageName());
-        registerReceiver(mMessageReceiver, filter);
-
-        IntentFilter filterCon = new IntentFilter();
-        filterCon.addAction(YunBaManager.MESSAGE_CONNECTED_ACTION);
-        filterCon.addCategory(getPackageName());
-        registerReceiver(mMessageReceiver, filterCon);
-
-        IntentFilter filterDis = new IntentFilter();
-        filterDis.addAction(YunBaManager.MESSAGE_DISCONNECTED_ACTION);
-        filterDis.addCategory(getPackageName());
-        registerReceiver(mMessageReceiver, filterDis);
-
-        IntentFilter pres = new IntentFilter();
-        pres.addAction(YunBaManager.PRESENCE_RECEIVED_ACTION);
-        pres.addCategory(getPackageName());
-        registerReceiver(mMessageReceiver, pres);
-
-    }
-
-    public class MessageReceiver extends BroadcastReceiver {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            Log.i("", "Action - " + intent.getAction());
-            if (YunBaManager.MESSAGE_RECEIVED_ACTION.equals(intent.getAction())) {
-                String status = "YunBa - Connected";
-                setTitleOfApp(status);
-                String topic = intent.getStringExtra(YunBaManager.MQTT_TOPIC);
-                String msg = intent.getStringExtra(YunBaManager.MQTT_MSG);
-                StringBuilder showMsg = new StringBuilder();
-                showMsg.append("[Message] ").append(YunBaManager.MQTT_TOPIC)
-                        .append(" = ").append(topic).append(" ,")
-                        .append(YunBaManager.MQTT_MSG).append(" = ").append(msg);
-                //setCostomMsg(showMsg.toString());
-
-            } else if(YunBaManager.MESSAGE_CONNECTED_ACTION.equals(intent.getAction())) {
-                //setCostomMsg("[YunBa] Connected");
-                String status = "YunBa - Connected";
-                setTitleOfApp(status);
-                SharePrefsHelper.setString(getApplicationContext(), CONNECT_STATUS, status);
-            } else if(YunBaManager.MESSAGE_DISCONNECTED_ACTION.equals(intent.getAction())) {
-                //setCostomMsg("[YunBa] DisConnected");
-                String status = "YunBa - DisConnected";
-                setTitleOfApp(status);
-                SharePrefsHelper.setString(getApplicationContext(), CONNECT_STATUS, status);
-            } else if (YunBaManager.PRESENCE_RECEIVED_ACTION.equals(intent.getAction())) {
-                String status = "YunBa - Connected";
-                setTitleOfApp(status);
-                String topic = intent.getStringExtra(YunBaManager.MQTT_TOPIC);
-                String msg = intent.getStringExtra(YunBaManager.MQTT_MSG);
-                StringBuilder showMsg = new StringBuilder();
-                showMsg.append("[Message from prensence] ").append(YunBaManager.MQTT_TOPIC)
-                        .append(" = ").append(topic).append(" ,")
-                        .append(YunBaManager.MQTT_MSG).append(" = ").append(msg);
-                //setCostomMsg(showMsg.toString());
-
-            }
-        }
-    }
-    private void  setTitleOfApp(final String status) {
-
-        Activity parent = this.getParent();
-        if(!YunbaUtil.isEmpty(status) && null != parent) {
-            this.getParent().setTitle(status);
-        }
-    }
-
-    @Override
-    protected void onDestroy() {
-        unregisterReceiver(mMessageReceiver);
-        super.onDestroy();
-    }*/
 }

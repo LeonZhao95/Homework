@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.util.Log;
 
 import io.yunba.android.manager.YunBaManager;
-import leon.homework.Activities.MainActivity;
 import leon.homework.Utils.YunbaUtil;
 
 /**
@@ -51,13 +50,5 @@ public class YunbaReceiver extends BroadcastReceiver {
             Log.d("DemoReceiver", showMsg);
 
         }
-    }
-    //send msg to MainActivity
-    private void processCustomMessage(Context context, Intent intent) {
-
-        intent.setAction(MainActivity.MESSAGE_RECEIVED_ACTION);
-        intent.addCategory(context.getPackageName());
-        context.sendBroadcast(intent);
-
     }
 }

@@ -171,7 +171,6 @@ public class MasterLayout extends FrameLayout implements OnClickListener {
 			@Override
 			public void onAnimationStart(Animation animation) {
 				// TODO Auto-generated method stub
-				System.out.println("print this");
 			}
 
 			@Override
@@ -193,8 +192,6 @@ public class MasterLayout extends FrameLayout implements OnClickListener {
 				cusview.setVisibility(View.VISIBLE);
 
 				flg_frmwrk_mode = 2;
-
-				System.out.println("flg_frmwrk_mode" + flg_frmwrk_mode);
 				
 
 			}
@@ -234,7 +231,6 @@ public class MasterLayout extends FrameLayout implements OnClickListener {
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 		pix = MeasureSpec.getSize(widthMeasureSpec);
-		System.out.println(pix);
 		if(isfirst){
 			initialise();
 			setpaint();
@@ -331,8 +327,6 @@ public class MasterLayout extends FrameLayout implements OnClickListener {
 
 		float startx = (float) (pix * 0.05);
 		float endx = (float) (pix * 0.95);
-		System.out.println("full circle " + full_circle_canvas.getWidth()
-				+ full_circle_canvas.getHeight());
 		float starty = (float) (pix * 0.05);
 		float endy = (float) (pix * 0.95);
 		rect = new RectF(startx, starty, endx, endy);
@@ -409,7 +403,6 @@ public class MasterLayout extends FrameLayout implements OnClickListener {
 		// TODO Auto-generated method stub
 
 		animation();
-		System.out.println("Action onclick...");
 	}
 
 }

@@ -1,10 +1,16 @@
 package leon.homework.Data
 
+import leon.homework.AppContext
+
 /**
  * Created by BC on 2017/2/5 0005.
  */
 
 object Const {
+    /**
+     *>>>>>>>>>>>>>>>>>>>>>>>>>>>>PATH
+     */
+    val DATA_PATH = AppContext.instance!!.filesDir.absolutePath+"/"
     /**
      * >>>>>>>>>>>>>>>>>URL
      */
@@ -13,6 +19,12 @@ object Const {
     val LoginCheckUrl = "http://zz503379238.oicp.net/usr/signup/info3.php"
     val ForgetPwdStuUrl = "http://zz503379238.oicp.net/usr/fpswd/fpswd.php"
     val DownloadQuestionsUrl = "http://zz503379238.oicp.net/usr/download/downdata/1.zip"
+    /**
+     * >>>>>>>>>>>>>>>>>>>广播
+     */
+    val BROADCAST_SYSTEM = "BROADCAST_SYSTEM"
+    val BROADCAST_HOMEWORK = "BROADCAST_HOMEWORK"
+    val BROADCAST_CHAT = "BROADCAST_CHAT"
     /**
      * >>>>>>>>>>>>>>>>>config
      */
@@ -67,6 +79,14 @@ object Const {
     val SAVE_STU_BIR = "Stu_Bir"
     val SAVE_STU_SEX = "Stu_Sex"
     val SAVE_STU_CLS = "Stu_Cls"
+    /**
+     * >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>download
+     */
+    val DOWNLOAD_ERROR = -1
+    val DOWNLOAD_UPDATE_PROGRESS = 0
+    val DOWNLOAD_OVER = 1
+    val DOWNLOAD_FILEEXIST = 2
+    val DOWNLOAD_PATH = DATA_PATH+"/Download/"
     /**
      * >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>others
      */

@@ -49,7 +49,6 @@ object Utils {
             try {
                 if (fileOutputStream != null) {
                     fileOutputStream.close()
-                    fileOutputStream = null
                 }
             } catch (e: IOException) {
                 e.printStackTrace()
@@ -60,7 +59,6 @@ object Utils {
 
     /**
      * 转换图片成圆形
-
      * @param bitmap
      * *            传入Bitmap对象
      * *
