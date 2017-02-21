@@ -177,7 +177,7 @@ class Student() {
                 object : IMqttActionListener {
                     override fun onSuccess(asyncActionToken: IMqttToken) {
                         //YunbaUtil.showToast("success", applicationContext)
-                        Log.d("Student","设置别名成功")
+                        Log.d("Student","设置别名成功:"+Alia)
                     }
                     override fun onFailure(asyncActionToken: IMqttToken, exception: Throwable) {
                         if (exception is MqttException) {

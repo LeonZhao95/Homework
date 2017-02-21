@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    >
-    <ImageView
+    android:layout_width="match_parent">
+<!--    <ImageView
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:background="@drawable/chinese"
@@ -30,7 +27,6 @@
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:background="@color/lightGreen">
-
             </View>
             <View
                 android:layout_width="wrap_content"
@@ -76,17 +72,49 @@
         </RelativeLayout>
 
 
-    </FrameLayout>
+    </FrameLayout>-->
+    <LinearLayout
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
 
-    <View
-        android:layout_below="@+id/frame0"
-        android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/img_work_subject"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+    </LinearLayout>
 
-        android:layout_height="1dp"
+    <LinearLayout
+        android:id="@+id/work_right_linear"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:padding="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="start"
+                android:id="@+id/work_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout
+            android:padding="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="end"
+                android:id="@+id/work_deadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
 
-        android:layout_marginTop="8dp"
-        android:background="@color/lightGrey"
-        android:layout_alignLeft="@+id/frame0"
-        android:layout_alignStart="@+id/frame0"></View>
+    </LinearLayout>
 
-</RelativeLayout>
+
+
+
+</LinearLayout>

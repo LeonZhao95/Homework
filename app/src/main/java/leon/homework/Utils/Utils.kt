@@ -131,7 +131,7 @@ object Utils {
     }
 
     fun setid(): String {
-        val time = System.currentTimeMillis().toString();
+        val time = System.currentTimeMillis().toString()
         val num = (Math.random()*900+100).toInt()
         val id = time+num.toString()
         return id

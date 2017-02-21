@@ -30,14 +30,29 @@
     </android.support.v4.widget.SwipeRefreshLayout>
 
 </LinearLayout>-->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="25dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <LinearLayout
+        android:background="@color/lightBlack"
+        android:id="@+id/message_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="消息"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
     <ListView
+        android:layout_below="@id/message_top"
         android:id="@+id/list_view_message"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </ListView>
-</FrameLayout>
+</RelativeLayout>

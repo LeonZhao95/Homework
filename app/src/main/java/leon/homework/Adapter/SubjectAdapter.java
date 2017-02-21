@@ -10,50 +10,47 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import leon.homework.JavaBean.Subject;
+import leon.homework.JavaBean.TodayWork;
 import leon.homework.R;
 
 /**
  * Created by mjhzds on 2017/2/6.
  */
 
-public class SubjectAdapter extends ArrayAdapter<Subject> {
+public class SubjectAdapter extends ArrayAdapter<TodayWork> {
 
     private int resourceId;
 
-    public SubjectAdapter(Activity context, int textViewResourceId, List<Subject> objects) {
+    public SubjectAdapter(Activity context, int textViewResourceId, List<TodayWork> objects) {
         super(context,textViewResourceId,objects);
         this.resourceId = textViewResourceId;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Subject subject = getItem(position);
+        TodayWork todayWork = getItem(position);
         View view;
         ViewHolder viewHolder;
         if (convertView == null) {
             view = LayoutInflater.from(getContext()).inflate(resourceId, null);
             viewHolder = new ViewHolder();
-            viewHolder.subjectImage = (ImageView) view.findViewById(R.id.icon);
-            viewHolder.subjectName = (TextView) view.findViewById(R.id.tvSub);
-            viewHolder.subjectNum = (TextView) view.findViewById(R.id.tvComp);
-            viewHolder.deadLine = (TextView) view.findViewById(R.id.tvDate);
+            viewHolder.subjectImage = (ImageView) view.findViewById(R.id.img_work_subject);
+            viewHolder.subjectName = (TextView) view.findViewById(R.id.work_title);
+            viewHolder.deadLine = (TextView) view.findViewById(R.id.work_deadline);
             view.setTag(viewHolder);
         } else {
             view = convertView;
             viewHolder = (ViewHolder) view.getTag();
         }
-        viewHolder.subjectImage.setImageResource(subject.getSubjectImage());
-        viewHolder.subjectName.setText(subject.getSubjectName());
-        viewHolder.subjectNum.setText(String.valueOf(subject.getSubjectNum()));
-        viewHolder.deadLine.setText(subject.getDeadLine());
+        viewHolder.subjectImage.setImageResource(todayWork.getSubjectImage());
+        viewHolder.subjectName.setText(todayWork.getSubjectName());
+        viewHolder.deadLine.setText(todayWork.getDeadLine());
         return view;
     }
 
     private class ViewHolder {
         ImageView subjectImage;
         TextView subjectName;
-        TextView subjectNum;
         TextView deadLine;
     }
 }

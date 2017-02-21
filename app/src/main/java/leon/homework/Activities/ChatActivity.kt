@@ -3,15 +3,10 @@ package leon.homework.Activities
 import android.os.Bundle
 import android.support.v4.widget.SwipeRefreshLayout
 import android.widget.LinearLayout
-import io.yunba.android.manager.YunBaManager
 import kotlinx.android.synthetic.main.activity_chat.*
 import leon.homework.Adapter.MsgAdapter
-import leon.homework.AppContext
 import leon.homework.JavaBean.Msg
 import leon.homework.R
-import org.eclipse.paho.client.mqttv3.IMqttActionListener
-import org.eclipse.paho.client.mqttv3.IMqttToken
-import org.eclipse.paho.client.mqttv3.MqttException
 import java.util.*
 
 class ChatActivity : BaseActivity() {
@@ -36,12 +31,12 @@ class ChatActivity : BaseActivity() {
                 msg_list_view.setSelection(msgList.size)   //将ListView定位到最后一行
                 input_text.setText("")
             }
-            YunBaManager.publish(AppContext.instance, "leon", content,
+            /*YunBaManager.publish(AppContext.instance, "leon", content,
                     object : IMqttActionListener {
                         override fun onSuccess(asyncActionToken: IMqttToken) {
-                            /*val topic = DemoUtil.join(asyncActionToken.topics, ", ")
+                            *//*val topic = DemoUtil.join(asyncActionToken.topics, ", ")
                             val msgLog = "Publish succeed : " + topic
-                            DemoUtil.showToast(msgLog, getApplicationContext())*/
+                            DemoUtil.showToast(msgLog, getApplicationContext())*//*
                         }
 
                         override fun onFailure(asyncActionToken: IMqttToken, exception: Throwable) {
@@ -51,7 +46,7 @@ class ChatActivity : BaseActivity() {
                             }
                         }
                     }
-            )
+            )*/
         })
     }
 

@@ -1,6 +1,7 @@
 package leon.homework.Adapter;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,8 +24,9 @@ public class MsgObjAdapter extends ArrayAdapter<MsgObject> {
         super(context, resource, objects);
         resourceId = resource;
     }
+    @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
         MsgObject msgObject = getItem(position);
         View view;
         ViewHolder viewHolder;
@@ -32,19 +34,25 @@ public class MsgObjAdapter extends ArrayAdapter<MsgObject> {
             view = LayoutInflater.from(getContext()).inflate(resourceId, null);
             viewHolder = new ViewHolder();
             viewHolder.msgIcon = (ImageView) view.findViewById(R.id.msg_icon);
-            viewHolder.msgObj = (TextView) view.findViewById(R.id.msg_title);
+            viewHolder.msgTitle = (TextView) view.findViewById(R.id.msg_title);
+            viewHolder.msgContent = (TextView)view.findViewById(R.id.msg_lastcontent);
+            viewHolder.msgTime = (TextView)view.findViewById(R.id.msg_time);
             view.setTag(viewHolder);
         } else {
             view = convertView;
             viewHolder = (ViewHolder) view.getTag();
         }
-        viewHolder.msgObj.setText(msgObject.getTitle());
-        viewHolder.msgIcon.setImageResource(R.drawable.chinese);
+        viewHolder.msgTitle.setText(msgObject.getTitle());
+        viewHolder.msgIcon.setImageBitmap(msgObject.getBm());
+        viewHolder.msgContent.setText(msgObject.getLastcontent());
+        viewHolder.msgTime.setText(msgObject.getTime());
         return view;
     }
 
     private class ViewHolder {
         ImageView msgIcon;
-        TextView msgObj;
+        TextView msgTitle;
+        TextView msgContent;
+        TextView msgTime;
     }
 }

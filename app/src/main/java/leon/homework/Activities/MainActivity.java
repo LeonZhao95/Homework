@@ -25,7 +25,6 @@ public class MainActivity extends FragmentActivity implements BottomNavigationBa
         setContentView(R.layout.activity_main);
         fragments = new ArrayList<>();
         initView();
-        //registerMessageReceiver();
     }
 
     /**

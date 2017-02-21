@@ -18,5 +18,4 @@ object SaveData{
     var sex: String by Preference(AppContext.instance!!, Const.SAVE_STU_SEX,"")
     var cls: String by Preference(AppContext.instance!!, Const.SAVE_STU_CLS,"")
     var isStudent:String by Preference(AppContext.instance!!, Const.SAVE_ISSTUDENT,"-1") //1 student 2 teacher -1 default
-
 }

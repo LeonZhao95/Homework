@@ -20,7 +20,7 @@ class AppContext : Application() {
         YunBaManager.start(applicationContext)
         YunBaManager.subscribe(applicationContext, arrayOf("aiye"), object : IMqttActionListener {
             override fun onSuccess(arg0: IMqttToken) {
-                Log.d(TAG, "Subscribe topic succeed")
+                Log.d(TAG, "Subscribe topic succeed ")
             }
 
             override fun onFailure(arg0: IMqttToken, arg1: Throwable) {

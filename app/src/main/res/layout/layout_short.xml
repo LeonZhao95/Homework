@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="从前有座山，山里有座庙，庙里有个和尚，那么他一次要吃几碗饭？"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/question"
+        android:layout_margin="16dp"
+        >
+        <EditText
+            android:id="@+id/answer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:background="@drawable/short_textview"
+            android:scrollbars="vertical"
+            android:gravity="top"
+            android:textSize="16sp"
+            android:textColor="@color/Black"
+            android:hint="请在输入框内简要作答"
+            android:text="1+1+1+1+1=20碗 "/>
+    </LinearLayout>
+</RelativeLayout>

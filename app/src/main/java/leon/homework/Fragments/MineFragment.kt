@@ -3,14 +3,13 @@ package leon.homework.Fragments
 import android.os.Bundle
 import android.os.Handler
 import android.os.Message
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import leon.homework.AppContext
 import leon.homework.Data.Const
 import leon.homework.R
-import leon.homework.Sqlite.WorkDao
+import leon.homework.Sqlite.WorkQuesDao
 import leon.homework.UI.MasterLayout
 import leon.homework.Utils.Downloader
 import leon.homework.Utils.FileUtil
@@ -33,7 +32,8 @@ class MineFragment : BaseFragment(){
                     info("开始解压")
                     ZipUtil.unzipFiles(File(Const.DOWNLOAD_PATH+"1.zip"),Const.DATA_PATH)
                     info("解压完成")
-                    WorkDao(AppContext.instance!!).execSQL(FileUtil.loadFile(Const.DATA_PATH+"ques_tfques.sql"))
+                    WorkQuesDao(AppContext.instance!!).execSQL(FileUtil.loadFile(Const.DATA_PATH+"ques_tfques.sql"))
+                    WorkQuesDao(AppContext.instance!!).execSQL(FileUtil.loadFile(Const.DATA_PATH+"ques_choicques.sql"))
                 }
                 Const.DOWNLOAD_UPDATE_PROGRESS ->{
                     masterLayout!!.cusview.setupprogress(msg.arg1)
@@ -45,7 +45,8 @@ class MineFragment : BaseFragment(){
                 Const.DOWNLOAD_FILEEXIST->{
                     info("已存在")
                     val s = FileUtil.loadFile(Const.DATA_PATH+"ques_tfques.sql")
-                    WorkDao(AppContext.instance!!).execSQL(s)
+                    WorkQuesDao(AppContext.instance!!).execSQL(s)
+                    WorkQuesDao(AppContext.instance!!).execSQL(FileUtil.loadFile(Const.DATA_PATH+"ques_choicques.sql"))
                 }
                 else -> {
                     toast("???")
@@ -73,7 +74,6 @@ class MineFragment : BaseFragment(){
             masterLayout!!.animation()   //Need to call this method for animation and progression
             when (masterLayout!!.flg_frmwrk_mode) {
                 1 -> {
-                    Log.d("Mine","create>>>>>>>>>>")
                     download()
                     //masterLayout!!.cusview.setupprogress(90)
                     //Start state. Call your method
@@ -94,6 +94,7 @@ class MineFragment : BaseFragment(){
             val url = Const.DownloadQuestionsUrl
             val path = Const.DOWNLOAD_PATH
             Downloader().Download(url,path,"1.zip")
+            Downloader().Download(url,path,"2.zip")
         }
     }
 

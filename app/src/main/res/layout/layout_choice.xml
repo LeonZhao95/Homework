@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="从前有座山，山里有座庙，庙里有个和尚，求解他一次要吃几碗饭？"/>
+    <RadioGroup
+        android:layout_below="@id/question"
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="vertical"
+        >
+
+        <RadioButton
+            style="@style/style_option"
+            android:id="@+id/optionA"
+            android:drawableLeft="@drawable/selector_option_a"
+            android:text="1碗" />
+
+        <RadioButton
+            style="@style/style_option"
+            android:id="@+id/optionB"
+            android:drawableLeft="@drawable/selector_option_b"
+            android:text="2碗" />
+
+        <RadioButton
+            style="@style/style_option"
+            android:id="@+id/optionC"
+            android:drawableLeft="@drawable/selector_option_c"
+            android:text="10碗" />
+
+        <RadioButton
+            style="@style/style_option"
+            android:id="@+id/optionD"
+            android:drawableLeft="@drawable/selector_option_d"
+            android:text="爱吃几碗吃几碗" />
+
+
+    </RadioGroup>
+
+</RelativeLayout>
